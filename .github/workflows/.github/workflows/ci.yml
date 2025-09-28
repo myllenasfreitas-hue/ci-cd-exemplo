@@ -1,14 +1,14 @@
-name: CI
+name: CI   # Nome do workflow
 
-on:
-  push:
+on:        # Quando rodar o workflow
+  push:    # Ao fazer push na branch principal
     branches: [ main ]
-  pull_request:
+  pull_request:  # Ao abrir pull request na branch principal
     branches: [ main ]
 
-jobs:
+jobs:      # Lista de trabalhos (jobs) que o servidor executa
   build-and-test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest   # Ambiente de execução
     steps:
       - name: Baixar código
         uses: actions/checkout@v4
